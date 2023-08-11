@@ -1,0 +1,292 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Swap', cursive;
+  margin: 0;
+  padding: 0;
+  background: url("fondo.jpg") no-repeat center/cover;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  background-color: #4d4d4d;
+  padding: 10px;
+  margin: 0;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 20px;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 20px;
+  position: relative;
+}
+
+.navbar li a.active {
+  border-bottom: 2px solid #ffffff;
+}
+
+.navbar li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  bottom: -2px;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar li a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar li a.active {
+  border-bottom: 2px solid #ffffff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.titulo {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.parrafo {
+  text-align: justify;
+  font-size: 20px;
+  line-height: 1.5;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  background-color: #4d4d4d;
+  padding: 20px;
+  color: #ffffff;
+  position: sticky;
+  bottom: 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.logo-column {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.logo-column img {
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.info-column {
+  flex: 1 1 auto;
+  margin: 0 -10px;
+}
+
+.company-name,
+.university-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.social-icons img:last-child {
+  margin-right: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  body, html {
+    overflow-y: auto;
+  }
+
+  .navbar {
+    background-color: #4d4d4d;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .navbar li {
+    margin: 10px 20px;
+  }
+
+  .navbar li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+  }
+
+  .navbar li a.active {
+    border-bottom: 2px solid #ffffff;
+  }
+
+  .navbar li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    bottom: -2px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navbar li a:hover::after {
+    transform: scaleX(1);
+  }
+
+  .navbar li a.active {
+    border-bottom: 2px solid #ffffff;
+  }
+
+  .container {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .titulo {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .parrafo {
+    text-align: justify;
+    font-size: 20px;
+    line-height: 1.5;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+  }
+
+  footer {
+    background-color: #4d4d4d;
+    padding: 20px;
+    color: #ffffff;
+    position: relative;
+    bottom: auto;
+    left: auto;
+    width: auto;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    max-width: 1200px;
+    flex-direction: column;
+  }
+
+  .logo-column {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+
+  .logo-column img {
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .info-column {
+    flex: 1 1 auto;
+    margin: 0 -10px;
+  }
+
+  .company-name,
+  .university-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .social-icons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .social-icons img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+  }
+
+  .social-icons img:last-child {
+    margin-right: 0;
+  }
+}
